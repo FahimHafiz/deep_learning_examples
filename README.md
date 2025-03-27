@@ -2,9 +2,9 @@
  Different Basic Deep Learning Problems and Analysis
 
 
-# Diabetes Prediction using a Neural Network
+## Problem1: Diabetes Prediction using a Neural Network
 
-## Project Overview
+## Project Overview of Problem-1
 
 This project aims to predict diabetes using a neural network implemented with TensorFlow Keras. The project explores various aspects of model training and evaluation, including:
 
@@ -81,44 +81,22 @@ This project aims to predict diabetes using a neural network implemented with Te
 
 
 
-## Results and Discussion
+## Results and Discussion for Problem 1
 
-### 1. Plain Validation
+# Summary of Performance Trends for Different Hyperparameter Variations for our Proposed Model for the diabetic datasets in Problem 1
 
-*   Insert Table or Figure showing accuracy, precision, recall, and ROC AUC for different train-test ratios.
-*   Discuss the optimal train-test split based on the results and provide justification.
+| **Hyperparameter**       | **Variation**                       | **Key Observations**                                             | **Optimal Trade-off**                        |
+|---------------------------|-------------------------------------|------------------------------------------------------------------|----------------------------------------------|
+| **Validation Type**       | Plain validation                   | Higher train accuracy but fluctuating test accuracy              | Cross-validation stabilizes generalization   |
+|                           | Cross-validation                   | More stable performance                                          | **Preferred over plain validation**          |
+| **Neurons (Layer 1 & 2)** | Increase (10-20)                   | Improves learning, but excessive neurons overfit                | **12-15 neurons work best**                  |
+|                           | Increase (5-15)                    | Increases learning capacity                                      | **8-12 neurons work moderate**               |
+| **Activation Function (Layer 1 & 2)** | ReLU                    | High performance across all the metrics in both train and test sets | **Preferred Activation Functions**           |
+|                           | Sigmoid/Tanh                       | Moderate performance                                             | Use for specific cases                       |
+|                           | Softmax                            | Poor performance                                                 | Not suitable for hidden layers               |
+| **Hidden Layers**         | Increase (1-4)                     | More layers improve learning but may overfit                    | **2-3 layers for optimal performance and balance learning** |
+| **Epochs**                | Increase (50-250)                  | Initially improves accuracy, but overfitting after 175 epochs   | **150-175 epochs optimal**                   |
 
-### 2. K-Fold Cross-Validation
-
-*   Insert Table or Figure showing average validation and test metrics for different values of k.
-*   Discuss the optimal value of k based on the results and provide justification.
-
-### 3. Hyperparameter Tuning
-
-#### 3.1 Varying Neurons in Layer 1
-
-*   Insert Table or Figure showing the impact of varying the number of neurons in Layer 1 on model performance.
-*   Discuss the optimal number of neurons and provide justification.
-
-#### 3.2 Varying Neurons in Layer 2
-
-*   Insert Table or Figure showing the impact of varying the number of neurons in Layer 2 on model performance.
-*   Discuss the optimal number of neurons and provide justification.
-
-#### 3.3 Varying Activation Function in Layer 1
-
-*   Insert Table or Figure showing the impact of varying the activation function in Layer 1 on model performance.
-*   Discuss the optimal activation function and provide justification.
-
-#### 3.4 Varying Activation Function in Layer 2
-
-*   Insert Table or Figure showing the impact of varying the activation function in Layer 2 on model performance.
-*   Discuss the optimal activation function and provide justification.
-
-#### 3.5 Varying Number of Hidden Layers
-
-*   Insert Table or Figure showing the impact of varying the number of hidden layers on model performance.
-*   Discuss the optimal number of hidden layers and provide justification.
 
 ## Conclusion
 
