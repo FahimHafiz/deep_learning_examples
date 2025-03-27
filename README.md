@@ -14,6 +14,7 @@ This project aims to predict diabetes using a neural network implemented with Te
     *   The number of neurons in the hidden layers.
     *   The activation functions in the hidden layers.
     *   The number of hidden layers.
+4.  **Varying Epochs**: Investigating the impact of varying epochs on the model performance.
 
 ## Code Structure and Analysis
 
@@ -79,6 +80,13 @@ This project aims to predict diabetes using a neural network implemented with Te
 *   It collects and prints the results (accuracy, precision, recall, ROC AUC) for each configuration.
 *   The function also generates plots of model accuracy and loss over epochs and the confusion matrix for each configuration.
 
+#### 5.6 Varying Number of Epochs (`main_epoch`)
+
+*   This function trains and evaluates the model with different numbers of epochs \[50,250].
+*   It uses plain validation with a fixed test size.
+*   It collects and prints the results (accuracy, precision, recall, ROC AUC) for each configuration.
+*   The function also generates plots of model accuracy and loss over epochs and the confusion matrix for each configuration.
+
 
 
 ## Results and Discussion for Problem 1
@@ -100,6 +108,4 @@ This project aims to predict diabetes using a neural network implemented with Te
 
 ## Conclusion
 
-*   Summarize the key findings of the project.
-*   Discuss the overall performance of the model and its limitations.
-*   Suggest potential future improvements.
+According to our analysis, we conclude that hyperparameters in neural networks are definitely a crucial part of the model's performance optimization. The optimal performance while tuning these hyperparameters is not straightforward and is is sometimes intuition-based. When the sample size becomes small, it becomes more difficult to optimize or find a conclusive pattern toward optimizing the performance. In our future work, we can consider the optimal values for each hyperparameters and make a new model architecture to investigate whether the optimal values of all the hyperparameters together work best considering the performance metrics. Furthermore, we can explore such similar small health datasets and create a pipeline that may involve a more structured approach towards finding the optimal values of these hyperparameters, which increases the model's performance and generalizes the dataset pattern.
